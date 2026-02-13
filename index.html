@@ -9,9 +9,9 @@
     <header class="nav">
       <div class="brand">💗 Valentine</div>
       <nav class="navlinks">
-        <button data-scroll="hero">Quote</button>
-        <button data-scroll="memories">Kenangan</button>
-        <button data-scroll="choco">Coklat</button>
+        <button type="button" data-scroll="hero">Quote</button>
+        <button type="button" data-scroll="memories">Kenangan</button>
+        <button type="button" data-scroll="choco">Coklat</button>
       </nav>
     </header>
 
@@ -23,8 +23,8 @@
           <h1>Happy Valentine, <span class="name">Sayang</span> 💕</h1>
           <p class="quote">“Dari semua hal yang pernah aku pilih, kamu adalah yang paling tepat.”</p>
           <div class="cta">
-            <button class="btn primary" data-scroll="memories">Lihat Kenangan Kita</button>
-            <button class="btn ghost" data-scroll="choco">Pilih Coklat</button>
+            <button type="button" class="btn primary" data-scroll="memories">Lihat Kenangan Kita</button>
+            <button type="button" class="btn ghost" data-scroll="choco">Pilih Coklat</button>
           </div>
           <p class="hint">Scroll pelan ya ✨</p>
         </div>
@@ -34,9 +34,7 @@
       <section id="memories" class="section">
         <div class="container">
           <h2>📸 Foto Kenangan Kita</h2>
-          <p class="sub">
-            Taruh 2 foto kalian di folder <b>/public</b> dengan nama <b>foto1.jpg</b> dan <b>foto2.jpg</b>.
-          </p>
+          <p class="sub"></p>
 
           <div class="grid photos">
             <figure class="polaroid">
@@ -68,21 +66,27 @@
     </main>
 
     <!-- MODAL -->
-<div class="modal-backdrop" id="modalBackdrop">
-  <div class="modal" role="dialog" aria-modal="true">
-    <button class="modal-close" id="closeModal" aria-label="Close">✕</button>
+    <div class="modal-backdrop" id="modalBackdrop" hidden>
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button type="button" class="modal-close" id="closeModal" aria-label="Close">✕</button>
 
-    <div class="modal-title">Yey! 🥰</div>
-    <div class="modal-body">
-      <p id="modalText"></p>
-      <p class="modal-msg">“Coklat ini akan aku belikan untuk kamu ❤️”</p>
+        <div class="modal-title" id="modalTitle">Yey! 🥰</div>
+
+        <div class="modal-body">
+          <p id="modalText"></p>
+          <p class="modal-msg">“Coklat ini akan aku belikan untuk kamu ❤️”</p>
+        </div>
+
+        <div class="confetti" aria-hidden="true">
+          <span>🎉</span><span>✨</span><span>💗</span><span>🎉</span><span>✨</span>
+        </div>
+
+        <button type="button" class="btn ghost" id="okModal">Tutup</button>
+      </div>
     </div>
 
-    <div class="confetti" aria-hidden="true">
-      <span>🎉</span><span>✨</span><span>💗</span><span>🎉</span><span>✨</span>
-    </div>
+    <div class="bg-hearts" aria-hidden="true"></div>
 
-    <button class="btn ghost" id="okModal">Tutup</button>
-  </div>
-</div>
-
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
