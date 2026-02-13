@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentine 💗</title>
+  </head>
+  <body>
+    <header class="nav">
+      <div class="brand">💗 Valentine</div>
+      <nav class="navlinks">
+        <button data-scroll="hero">Quote</button>
+        <button data-scroll="memories">Kenangan</button>
+        <button data-scroll="choco">Coklat</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section id="hero" class="section hero">
+        <div class="card hero-card">
+          <div class="pill">Untuk kamu</div>
+          <h1>Happy Valentine, <span class="name">Sayang</span> 💕</h1>
+          <p class="quote">“Dari semua hal yang pernah aku pilih, kamu adalah yang paling tepat.”</p>
+          <div class="cta">
+            <button class="btn primary" data-scroll="memories">Lihat Kenangan Kita</button>
+            <button class="btn ghost" data-scroll="choco">Pilih Coklat</button>
+          </div>
+          <p class="hint">Scroll pelan ya ✨</p>
+        </div>
+      </section>
+
+      <!-- MEMORIES -->
+      <section id="memories" class="section">
+        <div class="container">
+          <h2>📸 Foto Kenangan Kita</h2>
+          <p class="sub">
+            Taruh 2 foto kalian di folder <b>/public</b> dengan nama <b>foto1.jpg</b> dan <b>foto2.jpg</b>.
+          </p>
+
+          <div class="grid photos">
+            <figure class="polaroid">
+              <img class="photo real" src="/foto1.jpg" alt="Kenangan 1" />
+              <figcaption>Foto pertama kita 💗</figcaption>
+            </figure>
+
+            <figure class="polaroid">
+              <img class="photo real" src="/foto2.jpg" alt="Kenangan 2" />
+              <figcaption>Momen favoritku ✨</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHOCOLATE -->
+      <section id="choco" class="section">
+        <div class="container">
+          <h2>🍫 Pilih Coklat untuk Kamu</h2>
+          <p class="sub">Klik salah satu. Ini yang umum ada di Indomaret.</p>
+          <div class="grid chocos" id="chocoGrid"></div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div>Happy Valentine ❤️</div>
+        <small>Made with love.</small>
+      </footer>
+    </main>
+
+    <!-- MODAL -->
+    <div class="modal-backdrop" id="modalBackdrop" hidden>
+      <div class="modal" role="dialog" aria-modal="true">
+        <button class="modal-close" id="closeModal" aria-label="Close">✕</button>
+        <div class="modal-title">Yey! 🥰</div>
+        <div class="modal-body">
+          <p id="modalText"></p>
+          <p class="modal-msg">“Coklat ini akan aku belikan untuk kamu ❤️”</p>
+        </div>
+        <div class="confetti" aria-hidden="true">
+          <span>🎉</span><span>✨</span><span>💗</span><span>🎉</span><span>✨</span>
+        </div>
+        <button class="btn ghost" id="okModal">Tutup</button>
+      </div>
+    </div>
+
+    <div class="bg-hearts" aria-hidden="true"></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
