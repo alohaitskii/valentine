@@ -35,8 +35,7 @@
         <div class="container">
           <h2>📸 Foto Kenangan Kita</h2>
           <p class="sub">
-            Taruh 2 foto kalian di folder <b>/public</b> dengan nama <b>foto1.jpg</b> dan <b>foto2.jpg</b>.
-          </p>
+            
 
           <div class="grid photos">
             <figure class="polaroid">
@@ -68,23 +67,21 @@
     </main>
 
     <!-- MODAL -->
-    <div class="modal-backdrop" id="modalBackdrop" hidden>
-      <div class="modal" role="dialog" aria-modal="true">
-        <button class="modal-close" id="closeModal" aria-label="Close">✕</button>
-        <div class="modal-title">Yey! 🥰</div>
-        <div class="modal-body">
-          <p id="modalText"></p>
-          <p class="modal-msg">“Coklat ini akan aku belikan untuk kamu ❤️”</p>
-        </div>
-        <div class="confetti" aria-hidden="true">
-          <span>🎉</span><span>✨</span><span>💗</span><span>🎉</span><span>✨</span>
-        </div>
-        <button class="btn ghost" id="okModal">Tutup</button>
-      </div>
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="closeModal" aria-label="Close">✕</button>
+
+    <div class="modal-title">Yey! 🥰</div>
+    <div class="modal-body">
+      <p id="modalText"></p>
+      <p class="modal-msg">“Coklat ini akan aku belikan untuk kamu ❤️”</p>
     </div>
 
-    <div class="bg-hearts" aria-hidden="true"></div>
+    <div class="confetti" aria-hidden="true">
+      <span>🎉</span><span>✨</span><span>💗</span><span>🎉</span><span>✨</span>
+    </div>
 
-    <script type="module" src="/src/main.js"></script>
-  </body>
-</html>
+    <button class="btn ghost" id="okModal">Tutup</button>
+  </div>
+</div>
+
